@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__container">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/myteam-logo.png" alt="My team logo"
+          srcset="img/myteam-logo.png 1x, img/myteam-logo@2x.png 2x" width="160" height="40">
+      </a>
+      <nav class="sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item item">
+            <a class="item__link" href="index.html">home</a>
+          </li>
+          <li class="sitenav__item item">
+            <a class="item__link" href="about.html">about</a>
+          </li>
+          <li class="sitenav__item item">
+            <a class="button button--primary-light button--auto" href="contact.html">contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="site-header__nav-toggler" type="button"></button>
+    </div>
+  </header>
+
+  <main class="site-main site-main--contact">
+    <section class="contact">
+      <div class="contact__wrapper">
+        <div class="container contact__container">
+          <div class="contact__left">
+            <h2 class="contact__left-heading">Contact</h2>
+            <div class="contact__left-inner">
+              <h3 class="contact__left-inner-heading">Ask us about</h3>
+              <ul class="features__list contact__left-inner-list">
+                <li class="features__item feature contact__left-inner-item">
+                  <div class="feature__content">
+                    <p class="feature__content-description contact__left-inner-item-description">The quality of our talent network</p>
+                  </div>
+                </li>
+                <li class="features__item feature contact__left-inner-item">
+                  <div class="feature__content">
+                    <p class="feature__content-description contact__left-inner-item-description">Usage & implementation of our software</p>
+                  </div>
+                </li>
+                <li class="features__item feature contact__left-inner-item">
+                  <div class="feature__content">
+                    <p class="feature__content-description contact__left-inner-item-description">How we help drive innovation</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <form class="contact__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="contact__form-label" for="name-input">
+              <input class="contact__form-input" id="name-input" type="text" placeholder="Name" name="name" spellcheck="false" autocomplete="off" required>
+              <span class="contact__form-span">This field is required</span>
+            </label>
+            <label class="contact__form-label" for="email-input">
+              <input class="contact__form-input" id="email-input" type="email" placeholder="Email Address" name="email" spellcheck="false" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" required>
+              <span class="contact__form-span">This field is required</span>
+            </label>
+            <label class="contact__form-label" for="company_name-input">
+              <input class="contact__form-input" id="company_name-input" type="text" placeholder="Company Name" name="company_name" autocomplete="off" spellcheck="false" required>
+              <span class="contact__form-span">This field is required</span>
+            </label>
+            <label class="contact__form-label" for="title-input">
+              <input class="contact__form-input" id="title-input" type="text" placeholder="Title" name="title" spellcheck="false" autocomplete="off" required>
+              <span class="contact__form-span">This field is required</span>
+            </label>
+            <label class="contact__form-label" for="textarea">
+              <textarea class="contact__form-textarea" id="textarea" name="message" spellcheck="false" placeholder="Message" autocomplete="off" required></textarea>
+              <span class="contact__form-span">This field is required</span>
+            </label>
+            <button class="button button--secondary contact__form-submit" type="submit">submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__container">
+      <div class="site-footer__container-inner">
+        <div class="site-footer__logo-nav">
+          <a class="logo site-footer__logo" href="index.html">
+            <img class="logo__img site-footer__logo-img" src="img/myteam-logo.png" alt="My team logo"
+              srcset="img/myteam-logo.png 1x, img/myteam-logo@2x.png 2x" width="160" height="40">
+          </a>
+          <ul class="sitenav__list sitenav__list--footer">
+            <li class="sitenav__item item sitenav__item--footer">
+              <a class="item__link" href="index.html">home</a>
+            </li>
+            <li class="sitenav__item item sitenav__item--footer">
+              <a class="item__link" href="about.html">about</a>
+            </li>
+            </li>
+        </div>
+
+        <div class="site-footer__address-phone">
+          <address class="site-footer__address">
+            987 Hillcrest Lane
+            <br>Irvine, CA
+            <br>California 92714
+          </address>
+          <div class="site-footer__phone">
+            Call Us :
+            <a href="tel:+949-833-7432" class="site-footer__phone-link">949-833-7432</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__social-copyright">
+        <ul class="site-footer__social-icons">
+          <li class="site-footer__socail-icon">
+            <a class="site-footer__social-icon-link" href="#" target="_blank" aria-label="Facebook">
+              <svg class="site-footer__social-icon-svg">
+                <use xlink:href="img/socials-sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="site-footer__socail-icon">
+            <a class="site-footer__social-icon-link" href="#" target="_blank" aria-label="Pinterest">
+              <svg class="site-footer__social-icon-svg">
+                <use xlink:href="img/socials-sprite.svg#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="site-footer__socail-icon">
+            <a class="site-footer__social-icon-link" href="#" target="_blank" aria-label="Twitter">
+              <svg class="site-footer__social-icon-svg">
+                <use xlink:href="img/socials-sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="site-footer__copyright">Copyright 2020. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

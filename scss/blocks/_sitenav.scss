@@ -1,0 +1,106 @@
+.sitenav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.sitenav__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  @include reset-list;
+  margin-left: 40px;
+}
+
+.sitenav__list--footer {
+  margin-left: 0;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.sitenav__item:last-child {
+  margin-left: auto;
+}
+
+.sitenav__item--footer:not(:last-child),
+.sitenav__item--footer:last-child {
+  margin: 0;
+}
+
+.sitenav__item--footer:not(:last-child) {
+  margin-right: 40px;
+}
+
+.item__link {
+  display: inline-block;
+  @include semi_bold-font;
+  color: $white-text;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sitenav__item:not(:last-child):hover .item__link,
+.item__link--active,
+.sitenav__item--footer:last-child:hover .item__link {
+  color: $pink-text;
+}
+
+@include breakpoint-down (640px) {
+  .sitenav {
+    display: none;
+  }
+
+  .site-header--open .sitenav {
+    width: 68%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    top: 0;
+    padding-top: 65px;
+    background-color: #2c6269;
+    background-image: url("../../img/ham-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100px 200px;
+    background-position: bottom right;
+  }
+
+  .site-header--open .sitenav__list {
+    flex-direction: column;
+    padding-top: 39px;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-left: 0;
+    align-items: start;
+  }
+
+  .site-header--open .sitenav__item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .site-header--open .sitenav__item:first-child {
+    margin-bottom: 24px;
+  }
+
+  .site-header--open .sitenav__item:nth-child(2) {
+    margin-bottom: 36px;
+  }
+}
+
+@include breakpoint-down (490px) {
+  .sitenav__list--footer {
+    width: 327px;
+    justify-content: center;
+  }
+
+  .sitenav__item--footer:not(:last-child) {
+    margin-right: 24px;
+  }
+}

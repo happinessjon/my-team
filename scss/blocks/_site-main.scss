@@ -1,0 +1,13 @@
+.site-main {
+  position: relative;
+  z-index: -1;
+  flex-grow: 1;
+  background-color: $midnight-green;
+}
+
+@include breakpoint-up (640px) {
+  .site-main--contact,
+  .site-main--about {
+    z-index: 1;
+  }
+}

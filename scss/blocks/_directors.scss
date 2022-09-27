@@ -1,0 +1,136 @@
+.directors {
+  color: $white-text;
+  background-color: #004047;
+}
+
+.directors__container {
+  padding-top: 140px;
+  padding-bottom: 92px;
+}
+
+.directors__heading {
+  text-align: center;
+  @include bold-medium-font;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.directors__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.directors__item {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  height: 253px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 48px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.director__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.directors__item-front,
+.directors__item-back {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #012F34;
+  padding: 32px 24px 56px;
+}
+
+.directors__item-back {
+  transform: rotateY(180deg);
+  padding-top: 35px;
+}
+
+.directors__item-front::before {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  background-image: url("../../img/avatar-nikita.jpg");
+  background-repeat: no-repeat;
+  background-size: 96px;
+  background-position: center center;
+  border-radius: 50%;
+  border: 2px solid #C4FFFE;
+  content: "";
+}
+
+.director__name {
+  margin: 0;
+  color: #79C8C7;
+  @include bold-small-font;
+}
+
+.director__job {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
+}
+
+.director__blockquote {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 8px 0 24px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.director__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.director__social-link {
+  margin-left: 16px;
+}
+
+.director__card-toggle {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border: none;
+  background: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #F67E7E;
+  outline: none;
+  background-image: url("../../img/add.svg");
+  background-size: 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease,
+  transform 0.3s ease;
+}
+
+.director__card-toggle--close {
+  background-color: #79C8C7;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.director--open .director__inner {
+  transform: rotateY(180deg);
+}

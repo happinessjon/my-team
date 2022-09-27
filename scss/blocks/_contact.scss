@@ -1,0 +1,237 @@
+.contact {
+  color: $white-text;
+  background-image: url("../../img/contact-bg-dark.svg"),
+  url("../../img/contack-bg-pink.svg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px, auto 200px;
+  background-position: top right calc(50% + 625px), bottom right calc(50% - 630px);
+}
+
+.contact__wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 120px;
+}
+
+.contact__container {
+  max-width: 1152px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__left {
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__left-heading {
+  @include bold-bigger-font;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.contact__left-inner-heading {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: $pink-text;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.contact__left-inner-list {
+  text-align: left;
+}
+
+.contact__left-inner-item {
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact__left-inner-item-description {
+  @include bold-small-font;
+}
+
+.contact__form {
+  width: 542px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.contact__form-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  display: block;
+  width: 542px;
+  background-color: transparent;
+  border: none;
+  padding: 0 81px 17px 14px;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact__form-input {
+  margin-top: 17px;
+  margin-bottom: 8px;
+}
+
+.contact__form-input:valid,
+.contact__form-textarea:valid {
+  border-bottom: 1px solid #79C8C7;
+}
+
+// .contact__form-input:not(:placeholder-shown):invalid,
+// .contact__form-textarea:not(:placeholder-shown):invalid {
+//   border-bottom: 1px solid #F67E7E;
+// }
+
+// .contact__form-input:not(:placeholder-shown):invalid + .contact__form-span,
+// .contact__form-textarea:not(:placeholder-shown):invalid + .contact__form-span {
+//   display: block;
+// }
+
+.contact__form-input:focus:placeholder-shown,
+.contact__form-textarea:focus:placeholder-shown {
+  border-bottom: 1px solid #F67E7E;
+}
+
+.contact__form-input:focus:placeholder-shown + .contact__form-span,
+.contact__form-textarea:focus:placeholder-shown + .contact__form-span {
+  display: block;
+}
+
+.contact__form-input:focus:placeholder-shown::placeholder,
+.contact__form-textarea:focus:placeholder-shown::placeholder {
+  color: rgba(246, 126, 126, 0.6);
+}
+
+.contact__form-textarea {
+  min-height: 84px;
+  resize: none;
+  margin-top: 17px;
+  margin-bottom: 8px;
+}
+
+.contact__form-span {
+  display: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+  color: #F67E7E;
+}
+
+.contact__form-submit {
+  margin-top: 17px;
+}
+
+@include breakpoint-down (1050px) {
+  .contact {
+    background-image: none;
+  }
+
+  .contact__wrapper {
+    padding-top: 12px;
+    padding-bottom: 135px;
+    background-image: url("../../img/contact-bg-dark.svg"),
+      url("../../img/contack-bg-pink.svg");
+    background-repeat: no-repeat;
+    background-size: 100px 200px, auto 200px;
+    background-position: top left, bottom right;
+  }
+
+  .contact__container {
+    flex-direction: column;
+  }
+
+  .contact__left {
+    text-align: center;
+    max-width: 515px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+  }
+
+  .contact__left-heading {
+    line-height: 56px;
+    margin-bottom: 24px;
+  }
+
+  .contact__form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint-down (640px) {
+  .contact__left {
+    max-width: 327px;
+  }
+
+  .contact__left-inner-heading {
+    margin-bottom: 24px;
+  }
+
+  .contact__left-inner-list {
+    text-align: left;
+  }
+
+  .contact__form,
+  .contact__form-input,
+  .contact__form-textarea {
+    width: 400px;
+  }
+}
+
+@include breakpoint-down (490px) {
+  .contact__wrapper {
+    padding-top: 0px;
+    padding-bottom: 88px;
+    background-image: url("../../img/contack-bg-pink.svg");
+    background-position: bottom -100px right;
+  }
+
+  .contact__left {
+    margin-bottom: 56px;
+  }
+
+  .contact__left-heading {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .contact__left-inner-heading {
+    margin-bottom: 40px;
+  }
+
+  .contact__left-inner-item {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .contact__form,
+  .contact__form-input,
+  .contact__form-textarea {
+    width: 327px;
+  }
+}

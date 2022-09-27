@@ -1,0 +1,64 @@
+.site-header {
+  background-color: $midnight-green;
+}
+
+.site-header__container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding-top: 73px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.site-header__nav-toggler {
+  display: none;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/ham-menu.svg");
+  background-size: 20px 17px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@include breakpoint-down (768px) {
+  .site-header__container {
+    padding-top: 64px;
+  }
+}
+
+@include breakpoint-down (640px) {
+  .site-header--open::before {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+  }
+
+  .site-header__container {
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+
+  .site-header__nav-toggler {
+    display: block;
+  }
+
+  .site-header--open .site-header__nav-toggler {
+    position: fixed;
+    z-index: 50;
+    right: 20px;
+    top: 56px;
+    background-image: url("../../img/remove.svg");
+    background-size: 18px 17px;
+  }
+}

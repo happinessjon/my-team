@@ -1,0 +1,120 @@
+.talents {
+  color: $white-text;
+}
+
+.talents__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 250px;
+  background-image: url("../../img/talent-section-bg-pink.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 358px 100px;
+}
+
+.talents__heading {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  @include bold-big-font;
+  margin: 0;
+}
+
+.talents__heading::before {
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 200px;
+  background-image: url("../../img/talent-section-bg-dark.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  margin-left: -120px;
+  content: "";
+}
+
+.talents__heading-span {
+  color: $pink-text;
+}
+
+.talents__text {
+  position: relative;
+  z-index: 1;
+  @include semi_bold-font;
+  max-width: 445px;
+  padding-top: 83px;
+  margin: 0;
+}
+
+.talents__text::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  @include line(#79C8C7);
+  content: "";
+}
+
+@include breakpoint-down (1050px) {
+  .talents__container {
+    align-items: center;
+  }
+
+  .talents__heading {
+    max-width: 350px;
+    font-size: 64px;
+    line-height: 56px;
+  }
+
+  .talents__heading::before {
+    display: none;
+  }
+
+  .talents__text {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@include breakpoint-down (860px) {
+  .talents__container {
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom: 256px;
+    text-align: center;
+    background-position: bottom center;
+  }
+
+  .talents__text::before {
+    display: none;
+  }
+
+  .talents__heading {
+    margin-bottom: 24px;
+  }
+
+  .talents__text {
+    font-size: 15px;
+    padding-top: 0;
+    max-width: 457px;
+  }
+}
+
+@include breakpoint-down (490px) {
+  .talents__container {
+    padding-top: 0;
+    padding-bottom: 197px;
+  }
+
+  .talents__heading {
+    max-width: 245px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .talents__text {
+    max-width: 327px;
+  }
+}

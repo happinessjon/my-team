@@ -1,0 +1,152 @@
+.features {
+  background-color: $state-green;
+  color: $white-text;
+}
+
+.features__bg-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../../img/features-bg.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100px 244px;
+}
+
+.features__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 198px;
+  padding-bottom: 140px;
+}
+
+.features__heading {
+  position: relative;
+  z-index: 1;
+  max-width: 445px;
+  @include bold-medium-font;
+  margin: 0;
+}
+
+.features__heading::before {
+  @include line(#F67E7E);
+  position: absolute;
+  z-index: 1;
+  top: -54px;
+  content: "";
+}
+
+.features__list {
+  max-width: 540px;
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__item {
+  margin-bottom: 32px;
+}
+
+.feature {
+  display: flex;
+}
+
+.feature::before {
+  display: block;
+  height: 72px;
+  width: 100%;
+  max-width: 72px;
+  min-width: 72px;
+  flex-shrink: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  content: "";
+}
+
+.feature:nth-child(1)::before {
+  background-image: url("../../img/individual.png");
+}
+
+.feature:nth-child(2)::before {
+  background-image: url("../../img/implement.png");
+}
+
+.feature:nth-child(3)::before {
+  background-image: url("../../img/productivity.png");
+}
+
+.feature__content {
+  margin-left: 23px;
+}
+
+.feature__content-heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: $pink-text;
+  @include bold-small-font;
+}
+
+.feature__content-description {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+}
+
+@include breakpoint-down (1050px) {
+  .features__bg-container {
+    background-position: top right;
+  }
+
+  .features__container {
+    padding-bottom: 100px;
+  }
+}
+
+@include breakpoint-down (860px) {
+  .features__container {
+    padding-top: 136px;
+    padding-left: 59px;
+    flex-direction: column;
+  }
+
+  .features__heading {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 64px;
+  }
+
+  .features__heading::before {
+    top: -36px;
+  }
+}
+
+@include breakpoint-down (640px) {
+  .features__container {
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+
+  .features__heading {
+    margin-bottom: 56px;
+    max-width: 300px;
+  }
+}
+
+@include breakpoint-down (490px) {
+  .features__container {
+    padding-left: 20px;
+  }
+
+  .features__heading {
+    max-width: 240px;
+  }
+
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
